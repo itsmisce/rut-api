@@ -1,5 +1,4 @@
 const RutGenerator = require('../utils/ruts.js');
-const rutGenerator = new RutGenerator();
 
 exports.getRut = (req, res) => {
     try {
