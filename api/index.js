@@ -1,8 +1,20 @@
 const express = require("express");
-const routes = express.Router();
-const { getRut, validarRut } = require("../controllers/rutControllers");
+const app = express();
+const routes = require("../routes/routes");
+const cors = require("cors");
+require('dotenv').config();
+const port = process.env.PORT || 3000;
 
-routes.get("/api", getRut);
-Router.ger("/validar", validarRut)
+app.use(cors());
+app.use(express.json());
+app.use(express.urlencoded({ extended: true }));
 
-module.exports = routes;
+// Asigna las rutas a la aplicación
+app.use("/", routes);
+
+// en caso de querer usarlo desde local host, descomenta y ejecuta: npm start
+// app.listen(port, () => {
+//   console.log(`Servidor iniciado en http://localhost:${port}`);
+// });
+
+module.exports = app;

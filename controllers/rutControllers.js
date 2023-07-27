@@ -1,4 +1,4 @@
-const RutGenerator = require('../utils/ruts.js');
+const RutGenerator = require('../utils/ruts');
 
 exports.getRut = (req, res) => {
     try {
@@ -16,10 +16,9 @@ exports.getRut = (req, res) => {
         }
       
         const status = 200;
-        const link = 'https://rut-api.vercel.app/api';
         res.setHeader('Content-Type', 'application/json');
         res.setHeader('Charset', 'utf-8');
-        return res.json({ status, link, ruts: Array.from(rutsGenerados) });
+        return res.json({ status, ruts: Array.from(rutsGenerados) });
       } catch (error) {
         const status = error.status || 500;
         res.setHeader('Content-Type', 'application/json');

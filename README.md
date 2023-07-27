@@ -19,19 +19,11 @@ Bienvenido a la API Generadora de RUTs. Esta API te permite generar RUTs válido
 
 ## Uso
 
-1. Ejecuta la aplicación en tu máquina local:
+1. Descomenta app.listen en api/index.js y ejecuta la aplicación en tu máquina local:
 
-`node index.js`
+`npm start`
 
-2. Accede a la API en tu navegador o cliente de API:
-
-```
-http://localhost:PORT/
-Obtendrás la siguiente respuesta:
-"Bienvenido a la API Generadora de Ruts"
-```
-
-3. Para generar RUTs, realiza una solicitud GET a la siguiente ruta:
+2. Para generar RUTs, realiza una solicitud GET a la siguiente ruta:
 
 `http://localhost:PORT/api?cantidad=5`
 
@@ -41,15 +33,13 @@ Reemplaza `5` con la cantidad de RUTs que deseas generar. Recibirás una respues
 ```json
 {
   "status": 200,
-  "link": "https://rut-api.vercel.app/api",
   "ruts": ["12345678-9", "98765432-1", "87654321-0", "23456789-1", "54321678-9"]
 }
 ```
 
 ## Variables de Entorno
-El proyecto utiliza el archivo .env para configurar el puerto del servidor. Si deseas cambiar el puerto, crea un .env y define una variable PORT.
+El proyecto utiliza el archivo .env para configurar el puerto del servidor. Si deseas cambiar el puerto, cambialo en la variable del .env.
 
-`PORT=3000`
 
 ## Contribuciones
 Si deseas contribuir a este proyecto, sigue los siguientes pasos:
@@ -64,4 +54,4 @@ Si deseas contribuir a este proyecto, sigue los siguientes pasos:
 https://linktr.ee/itsmisce
 
 ## Licencia
-Este proyecto está bajo la Licencia [MIT](https://github.com/itsmisce/rut-api/LICENCE).
+Este proyecto está bajo la Licencia [MIT](https://github.com/itsmisce/rut-api/blob/main/LICENCE).
