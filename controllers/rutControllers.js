@@ -3,8 +3,8 @@ const RutGenerator = require('../utils/ruts');
 exports.getRut = (req, res) => {
     try {
         const cantidadRuts = parseInt(req.query.cantidad);
-        if (!cantidadRuts || cantidadRuts < 1) {
-          return res.status(400).json({ error: 'Debes ingresar una cantidad válida de RUTs a generar (mayor a 0).' });
+        if (!cantidadRuts || cantidadRuts < 1 || cantidadRuts > 10000) {
+          return res.status(400).json({ error: 'Debes ingresar una cantidad válida de RUTs a generar (1-9999).' });
         }
       
         const rutGenerator = new RutGenerator();

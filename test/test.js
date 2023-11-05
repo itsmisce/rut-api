@@ -15,7 +15,7 @@ describe('RutGenerator', () => {
     //   const totalRutsPosibles = 20000000;
     //   const rutsGeneradosHastaElMomento = 1000;
     //   const probabilidadRutUnico = (totalRutsPosibles - rutsGeneradosHastaElMomento) / totalRutsPosibles;
-    // console.log(probabilidadRutUnico); 
+    //   console.log(probabilidadRutUnico); 
 
     describe('generarRutUnico()', () => {
         it('debería generar un RUT único', () => {
